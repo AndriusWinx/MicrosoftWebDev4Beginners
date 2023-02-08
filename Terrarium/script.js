@@ -30,8 +30,12 @@ function dragElement(terrariumElement){
         pos3=e.clientX;
         pos4=e.clientY;
         console.log(pos1,pos2,pos3,pos4);
-        terrariumElement.style.top=terrariumElement.offsetTop-pos2+'px';
-        terrariumElement.style.left=terrariumElement.offsetLeft-pos1+'px';
+        if(pos1<`${document.getElementsByClassName("jar-top").getBoundingClientRect().bottom}` && pos1>`${document.getElementsByClassName("jar-bottom").getBoundingClientRect.top}`){
+            terrariumElement.style.top=`${document.getElementsByClassName("jar-bottom").getBoundingClientRect.top}`+'px';
+            terrariumElement.style.left=terrariumElement.offsetLeft-pos1+'px';
+        }
+        //terrariumElement.style.top=terrariumElement.offsetTop-pos2+'px';
+        //terrariumElement.style.left=terrariumElement.offsetLeft-pos1+'px';
     }
     function stopElementDrag(){
         document.onpointerup=null;
