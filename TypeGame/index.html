@@ -1,18 +1,60 @@
 <html>
     <head>
-        <title>Typewriter Challenge</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Typewriter Challenge</title>         <!--Title of webpage-->
+        <link rel="stylesheet" href="style.css">    <!--CSS file-->
+        <meta charset="UTF-8"/>                     <!--Character encoding code-->
+        <script src="script.js" defer></script>     <!--JavaScript file-->
     </head>
 
     <body>
-        <h1>Typewriter Challenge</h1>
-        <p>Practice your typing skills with a quote from Sherlock Holmes. Click **start** to begin!</p>
-        <p id="quote"></p>
-        <p id="status-message"></p>
-        <div>
-            <input type="text" aria-label="current word" id="typed-value"/> <!-- typing box -->
-            <button type="button" id="start">START!</button> <!-- start button -->
+        <!--Div for the Title and brief description of the webpage goal-->
+        <div id="title-description-div">            
+            <h1 id="main-title">Typewriter Challenge</h1>       
+            <p id="description">Practice your typing skills with a quote from Sherlock Holmes. Click **START!** to begin!</p>
         </div>
-        <script src="script.js"></script>
+
+        <!--Div for the quote and the input box-->
+        <!--It will display the quote to write and the input box when the START button is clicked-->
+        <div id="quote-input-div">                  
+            <p id="quote" class="hidden"></p>       
+            <input type="text" aria-label="current word" id="typed-value" disabled class="hidden"/> <!-- typing box -->
+        </div>
+
+        <!--Div to locate the buttons for starting the game and showing the ranking-->
+        <div id="buttons-div">
+            <button type="button" class='buttons' id="start">START!</button> <!-- start button -->
+            <button type="button" class='buttons' id="ranking-button">RANKING</button>  <!--ranking button-->
+        </div>
+
+        <!--Modal dialog box that has the size of the screen to be able to darken the page-->
+        <div id="modal-box" class="hidden"> 
+            <!--Modal dialog box shown at the end of the game giving some kudos and the score achieved-->
+            <div id="modal-box-content" class="hidden">
+                <!--&times means multiplication sign (X) and the semicolon is to avoid translating &times as plain text-->
+                <span id="close-cross" class="close-cross">&times;</span>
+                <!--some kudos and score achieved-->
+                <h3>CONGRATULATIONS!</h3> 
+                <p id="modal-box-text"></p>
+                <p id="words-per-second"></p>
+            </div>
+        </div>
+        
+        <!--Modal dialog box that has the size of the screen to be able to darken the page-->
+        <div id="modal-box-ranking" class="hidden">
+            <!--Modal dialog box that shows the TOP 5 scores using localStorage-->
+            <div id="modal-box-ranking-content" class="hidden">
+                <!--&times means multiplication sign (X) and the semicolon is to avoid translating &times as plain text-->
+                <span id="close-cross-ranking" class="close-cross">&times;</span>
+                <!--TOP 5 scores using localStorage-->
+                <h3>TOP 5 CHALLENGERS!</h3> 
+                <p id="modal-box-ranking0"></p>
+                <p id="modal-box-ranking1"></p>
+                <p id="modal-box-ranking2"></p>
+                <p id="modal-box-ranking3"></p>
+                <p id="modal-box-ranking4"></p>
+
+            </div>
+        </div>
+        <!--<script src="script.js"></script>-->
     </body>
 </html>

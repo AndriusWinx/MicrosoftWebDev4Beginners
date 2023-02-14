@@ -1,7 +1,94 @@
-.highlight{
+/*Class hidden allows to hide the element*/
+.hidden{
+	display: none;
+	visibility: hidden;
+}
+
+/*highlight class adds colour to the words that has to be currently written*/
+.highlight{     /*the dot is for class */
     background-color: yellow;
 }
+
+/*typo class turns the input box red if the current word is being written with mistakes*/
 .typo{
     background-color: lightcoral;
     border:red;
+}
+
+/*Adding some font and centering the title*/
+#title-description-div{    /*The hashtag is for id*/
+    /*the commented statements are useless as they are alredy enabled by default*/
+/*    position: static;
+    height:fit-content;
+    width: 100%;
+    left: 0%;
+    top: 0%;*/
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Adding font to the description of the game*/
+#description{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Centering the buttons within the screen*/
+#buttons-div{
+    position: absolute;
+    width: 100%;
+	left:0%;
+	top: 35%;
+    display: grid;
+    place-items: center;
+}
+
+/*Adding font to the buttons*/
+.buttons{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:xx-large;
+}
+
+/*Adding font to the quote*/
+#quote-input-div{
+    /*Again the commented statements are default*/
+/*	position: static;
+	height: fit-content;
+	width: 100%;*/
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-align: center;
+}
+
+/*Its a class so it can be applied to other modal boxes*/
+.modal-box-background{     /*this modal box acts as the background (the webpage behind the actual modal box)*/ 
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    overflow:auto; /*enable scrolling*/
+    background-color: rgba(0,0,0,0.4);  /*This background colour is applied to modal-box-content as well*/
+}
+
+/*Its not a class because this is the actual modal box for the end of the game*/
+#modal-box-content{ /*this is the modal-bx itself*/
+    margin: 15% auto; /*15% from top and centered*/
+    width: 35%;
+    /*height: fit-content;*/
+    text-align: center;
+    background-color:cornsilk;  /*Needed because of the background colour of modal-box*/
+}
+
+/*Class so it can be apllied to other closing symbols*/
+.close-cross{
+    float:right;    /*Appears on the right of its div*/
+    font-size: 28px;
+}
+
+/*Modal box for the ranking*/
+#modal-box-ranking-content{
+    margin: 15% auto;   /*centering the modal box (auto centers horizontically)*/
+    width: 25%;
+   /* height: fit-content;*/
+    background-color:cornsilk;
+    text-align: center;
 }
